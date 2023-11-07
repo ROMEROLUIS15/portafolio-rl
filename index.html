@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="./img/capturelogo.512.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Noto+Sans&family=PT+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <script src="./app.js" defer></script>
+    <script>
+      // Dark mode codigo
+      if (
+        localStorage.getItem('color-theme') === 'dark' ||
+        (!('color-theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <title>Portafolio</title>
+  </head>
+  <body
+    class="bg-sky-50 text-stone-900 dark:bg-primary dark:text-cyan-50 font-roboto"
+  >
+    <header>
+      <!--  INICIO MENU  -->
+      <nav
+        class="flex justify-between py-10 m-auto px-10 text-lg font-medium tracking-widest md:items-center"
+      >
+        <!-- <a href=""><img src="./img/icono.png" alt="" width="28" /></a> -->
+        <div
+          id="menu"
+          class="bg-white dark:bg-slate-800 p-7 h-[380px] w-[320px] md:flex flex-col items-start justify-around rounded-lg text-dark dark:text-white md:flex-row md:w-full md:py-0 md:h-[50px] md:bg-inherit md:dark:bg-primary hidden"
+        >
+          <ul
+            class="flex h-5/6 flex-col justify-around md:flex-row md:justify-center w-full"
+          >
+            <li class="md:px-5 hover:text-sky-600"><a href="#quiensoy">About me</a></li>
+            <li class="md:px-5 hover:text-sky-600">
+              <a href="#experiencia">Experience</a>
+            </li>
+            <li class="md:px-5 hover:text-sky-600"><a href="#proyectos">Projects</a></li>
+            <li class="md:px-5 hover:text-sky-600">
+              <a href="#contacto">Contact me</a>
+            </li>
+          </ul>
+          
+          <!-- BOTON MODO OSCURO -->
+          <button id="darkButton">
+            <i class="bi bi-moon-stars-fill text-sky-600 text-2xl"></i>
+
+
+          </button>
+          <!-- BOTON MENU HAMBURGUESA -->
+        </div>
+        <button id="menu-button" class="absolute top-10 right-12 md:hidden">
+          <span
+            class="br-1 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+          <span
+            class="br-2 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+          <span
+            class="br-3 block bg-black dark:bg-white my-2 rounded-md h-[3px] w-[28px]"
+          ></span>
+        </button>
+      </nav>
+      <!-- FIN DEL MENU  -->
+    </header>
+    <main>
+      <!-- #1 SECCION HERO  -->
+      <section class="my-0 flex flex-col justify-center items-center lg:flex-row lg:h-[850px]">
+        <div class="p-10 lg:w-[80%] lg:h-[500px] lg:self-center">
+          <h1 id="quiensoy"
+            class="text-sky-600 dark:text-sky-300 text-2xl font-bold tracking-widest leading-10"
+          >
+            Hello, I am
+          </h1>
+          <p class="py-2 text-3xl font-bold text-slate-600 dark:text-slate-200">
+           Luis Romero
+          </p>
+
+          
+          <p class="mt-5 text-lg">
+            Fullstack developer junior with experience in creating attractive and functional websites. 
+            I value open communication and am always looking to improve my skills through continuous learning, 
+            Let's work together to develop impressive projects.
+          </p>
+          <p class="text-3xl py-6 font-bold text-slate-500 dark:text-slate-400">
+            Development of WEB applications for a better world.
+          </p>
+          <!-- REDES SOCIALES -->
+          <div class="py-6">
+            <a href="https://vercel.com/luis-romeros-projects" class="pr-2 text-2xl hover:text-sky-600"
+              ><i class="bi bi-folder px-2"></i
+            ></a>
+            <a href="https://instagram.com/hrndez100?igshid=MzMyNGUyNmU2YQ==" class="pr-2 text-2xl hover:text-sky-600"
+              ><i class="bi bi-instagram px-2"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/luis-romero-215765278/" class="pr-2 text-2xl hover:text-sky-600"
+              ><i class="bi bi-linkedin px-2"></i
+            ></a>
+            <a href="https://github.com/ROMEROLUIS15" class="pr-2 text-2xl hover:text-sky-600"
+              ><i class="bi bi-github px-2"></i
+            ></a>
+          </div>
+          <!-- <div>
+            <button
+              class="border-2 rounded border-sky-500 p-4 w-[250px] text-lg tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"
+            >
+            Social Media
+            </button>
+          </div> -->
+          <div>
+          
+            <button
+            
+              class="border-2 rounded border-sky-500 font-bold bg-sky-600 text-white p-4 w-[250px] text-lg tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300 "
+            >
+            Let's talk !
+            </button>
+          </div>
+        </div>
+        <!-- Contenedor para la Imagen -->
+        <div class="my-10 w-full">
+          <div
+            class="w-[300px] h-[320px] m-auto rounded-lg lg:w-[100%] lg:h-[100%] lg:bg-[length:450px_576px]"
+          > <img src="./img/fotoportafolio.jpeg" alt="">
+        </div>
+        </div>
+      </section>
+
+      <!-- #2 SECCION EXPERIENCIA LABORAL -->
+      <h2 id="experiencia"
+        class="text-3xl text-slate-700 dark:text-white font-bold tracking-widest w-[85%] m-auto text-center pt-8"
+      >
+      Work Experience
+      </h2>
+      <section
+        class="my-12 flex flex-col w-[84%] m-auto lg:flex-row lg:w-[87%] lg:my-28"
+        id="jobSection"
+      >
+        <div class="flex justify-between lg:flex-col lg:w-[20%]">
+          <button
+            type="button"
+            id="link1"
+            data-id="job1"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left border-sky-500 bg-white dark:bg-slate-700"
+          >
+          Studies
+          </button>
+          <button
+            type="button"
+            data-id="job2"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
+          >
+          Project experience
+          </button>
+          <button
+            type="button"
+            data-id="job3"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
+          >
+            Stack
+          </button>
+          <button
+            type="button"
+            data-id="job4"
+            class="border-b-2 hover:dark:bg-slate-700 w-full px-4 py-1 hover:bg-white focus:bg-white focus:border-sky-500 focus:dark:bg-slate-700 lg:border-l-2 lg:border-b-0 lg:h-full lg:text-left"
+          >
+          Soft skills
+          </button>
+        </div>
+
+        <!-- CONTAINER JOB DESCRIPTION -->
+        <div class="my-5 lg:px-10 lg:my-0 lg:max-w-[800px]">
+          <!-- JOB #1 DESCRIPTION -->
+
+          <article id="job1">
+            <h3>
+              Systems Engineering
+            </h3>
+            <h4 class="text-sm pb-5">January 2023 - Present</h4>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  I have developed modern, efficient and easy to maintain applications for both internal and external clients.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  
+                I have worked with several modern WEB technologies including HTML, CSS, JavaScript, React, Tailwind CSS, Node js, Git, 
+                source control (Git) and package managers (npm).
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Communicative, adaptability, reliability, proactive, collaborative, work ethic.
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- JOB #2 DESCRIPTION -->
+
+          <article id="job2" class="hidden">
+            <h3>
+              Systems Engineering
+            </h3>
+            <h4 class="text-sm pb-5">January 2023 - Present</h4>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  I have developed modern, efficient and easy to maintain applications for both internal and external clients.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  I have worked with several modern WEB technologies including HTML, CSS, JavaScript, React, Tailwind CSS, Node js, Git, 
+                source control (Git) and package managers (npm).
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Communicative, adaptability, reliability, proactive, collaborative, work ethic.
+                </p>
+              </li>
+            </ul>
+          </article>
+          <!-- JOB #3 DESCRIPTION -->
+          <article id="job3" class="hidden">
+            <h3>
+              Systems Engineering
+            </h3>
+            <h4 class="text-sm pb-5">January 2023 - Present</h4>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  I have developed modern, efficient and easy to maintain applications for both internal and external clients.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  I have worked with several modern WEB technologies including HTML, CSS, JavaScript, React, Tailwind CSS, Node js, Git, 
+                source control (Git) and package managers (npm).
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Communicative, adaptability, reliability, proactive, collaborative, work ethic.
+                </p>
+              </li>
+            </ul>
+          </article>
+          <!-- JOB #4 DESCRIPTION -->
+          <article id="job4" class="hidden">
+            <h3>
+              Systems Engineering
+            </h3>
+            <h4 class="text-sm pb-5">January 2023 - Present</h4>
+            <ul>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  I have developed modern, efficient and easy to maintain applications for both internal and external clients.
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  I have worked with several modern WEB technologies including HTML, CSS, JavaScript, React, Tailwind CSS, Node js, Git, 
+                source control (Git) and package managers (npm).
+                </p>
+              </li>
+              <li class="flex items-center py-2">
+                <span class="pr-2 text-sky-500 font-black">&#9655;</span>
+                <p class="text-stone-900 dark:text-cyan-50 font-normal px-5">
+                  Communicative, adaptability, reliability, proactive, collaborative, work ethic.
+                </p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- #3 SECCION PROYECTOS -->
+
+      <h3 id="proyectos"
+        class="text-3xl text-slate-700 dark:text-white my-5 px-12 font-bold tracking-widest md:text-center"
+      >
+      My Latest Projects
+      </h3>
+
+      <section
+        class="my-12 font-bold flex flex-col items-center justify-center h-[150px] m-auto lg:flex-row"
+      >
+        <!-- PRIMER PROYECTO  -->
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <a href="https://weather-app-pi-seven-46.vercel.app/">
+            <img
+              src="./img/clima-captura.JPG"
+              alt=""
+              class="opacity-80 hover:opacity-100"
+            /></a>
+            <h4 class="font-bold my-2">WEATHER APP</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >HTML</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >CSS</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >REACT</span
+                >
+              </div>
+              <div
+                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
+              >
+                <a href="https://github.com/ROMEROLUIS15/weather-app.git"><i class="bi bi-github px-2"></i></a>
+                <a href="https://weather-app-pi-seven-46.vercel.app/"><i class="bi bi-eye px-2"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- SEGUNDO PROYECTO  -->
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <a href="https://rick-and-morty-app-nu.vercel.app/">
+            <img
+              src="./img/RM-captura.JPG"
+              alt=""
+              class="opacity-80 hover:opacity-100"
+            /></a>
+            <h4 class="font-bold my-2"></h4>RICK AND MORTY APP</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >HTML</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >REACT</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >JS</span
+                >
+              </div>
+              <div
+                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
+              >
+                <a href="https://github.com/ROMEROLUIS15/rick-and-morty-app.git"><i class="bi bi-github px-2"></i></a>
+                <a href="https://rick-and-morty-app-nu.vercel.app/"><i class="bi bi-eye px-2"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- TERCER PROYECTO  -->
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5 ">
+          <div class="m-2">
+            <a href="https://entregable5-pokedex-app.vercel.app/">
+            <img
+              src="./img/pokedex-Captura.JPG"
+              alt=""
+              class="opacity-80 hover:opacity-100"
+            /></a>
+            <h4 class="font-bold my-2">POKEDEX APP</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >REACT</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >TAILWIND</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >JS</span
+                >
+              </div>
+              <div
+                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
+              >
+                <a href="https://github.com/ROMEROLUIS15/entregable5-pokedex-app.git"><i class="bi bi-github px-2"></i></a>
+                <a href="https://entregable5-pokedex-app.vercel.app/"><i class="bi bi-eye px-2"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <!-- CUARTO PROYECTO -->
+        <div class="border-1 rounded-lg bg-white dark:bg-slate-800 m-5">
+          <div class="m-2">
+            <a  href="https://romeroluis15.github.io/Proyecto-carrito/">
+            <img
+              src="./img/e-commerce-captura.JPG"
+              alt=""
+              class="opacity-80 hover:opacity-100"
+            /></a>
+            <h4 class="font-bold my-2"></h4>E-COMMERCE</h4>
+            <article class="flex justify-between">
+              <div class="flex flex-nowrap items-center">
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >HTML</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >CSS</span
+                >
+                <span class="bg-slate-200 rounded-lg px-2 mr-2 text-slate-700"
+                  >JS</span
+                >
+              </div>
+              <div
+                class="text-xl text-slate-600 dark:text-slate-200 pr-2 flex flex-nowrap"
+              >
+                <a href="https://github.com/ROMEROLUIS15/Proyecto-carrito.git"><i class="bi bi-github px-2"></i></a>
+                <a href="https://romeroluis15.github.io/Proyecto-carrito/"><i class="bi bi-eye px-2"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- #4 SECCION CONTACTOS  -->
+
+      <h3
+        class="text-3xl text-slate-700 dark:text-white mt-12 mb-10 px-10 font-bold tracking-widest text-center"
+      >
+      Contact me
+      </h3>
+
+      <section class="flex flex-col w-[90%] m-auto" id="contacto">
+        <form action="" class="w-[90%] md:max-w-[600px] m-auto">
+          <div class="text-slate-600 dark:text-slate-600">
+            <input
+              placeholder="info@example.com"
+              type="email"
+              name="email"
+              id="email"
+              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+            />
+          </div>
+
+          <div class="py-3 text-slate-600 dark:text-slate-600">
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Name"
+              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+            />
+          </div>
+
+          <div class=" text-slate-600 dark:text-slate-600">
+            <textarea
+              name="msj"
+              id="msj"
+              rows="5"
+              placeholder="Message"
+              class="p-3 w-full rounded-lg focus:outline-none focus:ring focus:ring-blue-400"
+            ></textarea>
+          </div>
+          <div class="my-3">
+            <button
+         
+              class="bg-sky-600 text-white p-3 w-full rounded-lg text-xl tracking-widest hover:bg-sky-500 hover:dark:text-slate-900 ease-out duration-300"
+            >
+            Send Message
+            </button>
+          </div>
+        </form>
+        <!-- #5 FOOTER  -->
+        <footer class="text-center mt-12 mb-5">
+          <p>
+            <!-- Designed &#38; Developed by Luis Romero. -->
+            Developed by Luis Romero.
+          </p>
+          <div class="my-2">
+            <!-- <a href=""><i class="bi bi-twitter hover:text-sky-500 px-2"></i></a> -->
+            <a href="https://vercel.com/luis-romeros-projects"><i class="bi bi-folder hover:text-sky-500 px-2"></i></a>
+            
+            <a href="https://instagram.com/hrndez100?igshid=MzMyNGUyNmU2YQ==">
+              <i class="bi bi-instagram hover:text-sky-500 px-2"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/luis-romero-215765278/"
+              ><i class="bi bi-linkedin hover:text-sky-500 px-2"></i
+            ></a>
+            <a href="https://github.com/ROMEROLUIS15"><i class="bi bi-github hover:text-sky-500 px-2"></i></a>
+            <i class=''></i>
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
